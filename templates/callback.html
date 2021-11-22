@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Callback {{callback_name}}</h2>
+
+<img src="/{{callback_id}}/img"><br>
+
+<form action="/{{callback_id}}/" method="post">
+    <input class="text-input" type="text" id="new_name" name="new_name"
+        placeholder="Please put a new name..."><br>
+    <input class="action-button" type="submit" name='rename' value="Rename">
+</form>
+
+<form action="/{{callback_id}}/" method="post">
+    <input class="action-button" type="submit" name="delete" value="Delete">
+</form>
+
+{% endblock %}
